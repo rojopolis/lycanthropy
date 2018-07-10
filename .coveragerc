@@ -1,0 +1,3 @@
+[run]
+source = lycanthropy
+omit = lycanthropy/_version.py
