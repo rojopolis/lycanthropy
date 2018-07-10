@@ -1,4 +1,7 @@
+from __future__ import (division, absolute_import, 
+                        print_function, unicode_literals)
 import re
+import six
 
 
 def snake_to_camel(snake_str):
@@ -59,7 +62,7 @@ def morph_dict(d, convert_function):
     """
     # Attribution: https://stackoverflow.com/a/33668421/633213
     new = {}
-    for k, v in d.iteritems():
+    for k, v in six.iteritems(d):
         new_v = v
         if isinstance(v, dict):
             new_v = morph_dict(v, convert_function)
